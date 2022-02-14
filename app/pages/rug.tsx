@@ -25,7 +25,7 @@ import { A } from '../components/anchor';
 import { getOpenSeaAssetUrl } from '../utils/urls';
 
 export const SELECTABLE_BACKGROUND: [string, string][] = [
-  [LONDON_GIFT_CONTRACT, 'LONDON gift'],
+  ["0x506543b7f2dce30e235714446dc9bd634efae8a1","S K I E S"]
 ];
 
 const IndexPage: NextPage = () => {

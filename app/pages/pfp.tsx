@@ -6,8 +6,7 @@ import { Header } from '../components/header';
 import { PFP } from '../components/pfp';
 import { HASH_CONTRACT, LONDON_GIFT_CONTRACT } from '../constants';
 export const SELECTABLE_BACKGROUND: [string, string][] = [
-  [LONDON_GIFT_CONTRACT, 'LONDON gift'],
-  [HASH_CONTRACT, '$HASH'],
+  ["0x506543b7f2dce30e235714446dc9bd634efae8a1","S K I E S"]
 ];
 
 export const PER_PROJECT_SETTINGS: { [key: string]: any } = {
