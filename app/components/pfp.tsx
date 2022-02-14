@@ -26,9 +26,10 @@ import { getOpenSeaAssetUrl } from '../utils/urls';
 import { EmbersAvatarCanvas } from './embersAvatar';
 import { deployments } from '@pob/protocol';
 export const SELECTABLE_BACKGROUND: [string, string][] = [
-  [deployments[CHAIN_ID].embers, 'LONDON embers'],
-  [LONDON_GIFT_CONTRACT, 'LONDON gift'],
-  [HASH_CONTRACT, '$HASH'],
+  // [deployments[CHAIN_ID].embers, 'LONDON embers'],
+  // [LONDON_GIFT_CONTRACT, 'LONDON gift'],
+  // [HASH_CONTRACT, '$HASH'],
+  ["0x506543b7f2dce30e235714446dc9bd634efae8a1","S K I E S"]
 ];
 
 export const SELECTABLE_FOREGROUND: [string, string][] = [
