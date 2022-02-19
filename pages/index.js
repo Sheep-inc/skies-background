@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styles from './pfp.module.css'
 import * as loadImage from "blueimp-load-image/js/load-image"
 import {Modal} from "../modules/web3modal"
-import Script from 'next/Script'
+import Script from 'next/script'
 export default function Pfp() {
     const [skies, setSkies] = useState([]);
     const [skySelected, selectSky] = useState({});
