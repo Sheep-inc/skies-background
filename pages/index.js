@@ -41,8 +41,10 @@ export default function Pfp() {
                         <h3>choose a sky and upload any front image to generate pfp</h3>
                     </div>
                     <div className="col-12">
-                        <img key="mergeBottom" crossOrigin="anonymous" className={styles.merger} id="mergeBottom"/>
-                        <img key="mergeTop" crossOrigin="anonymous" className={styles.merger} id="mergeTop"/>
+                        <div className="mergeHolder">
+                            <img key="mergeBottom" crossOrigin="anonymous" className={styles.merger} id="mergeBottom"/>
+                            <img key="mergeTop" crossOrigin="anonymous" className={styles.merger} id="mergeTop"/>
+                        </div>
                         <button className={styles.download} onClick={merge}>Download</button>
                     </div>
                 </div>
@@ -64,6 +66,12 @@ export default function Pfp() {
                 .col-md{
                     height: 95vh;
                 }
+                .mergeHolder{
+                    height: 0px;
+                    position: relative;
+                    top: -3%;
+                    padding-bottom: 400px;
+                }
             }
             @media (max-width:768px){
                 .order-md-1{
@@ -71,12 +79,27 @@ export default function Pfp() {
                     border-left: unset;
                     border-right: unset;
                 }
+                .mergeHolder{
+                    height: 0px;
+                    position: relative;
+                    top: 3%;
+                    padding-bottom: 210px;
+                }
+                .mergeTop{
+                    top: -200px;
+                }
+                ${styles.merger}{
+                    width:200px!important
+                }
             }
             input{
                 width: fill-available;
             }
             .userInputImg{
                 width:100%
+            }
+            .mergeTop{
+                top: -400px;
             }
         `}</style>
     </>)

@@ -2,7 +2,7 @@
     max-width:100px
 }
 .merger{
-    position: absolute;
+    position: relative;
     bottom: 1em;
     left: 1em;
     max-height: 400px;
