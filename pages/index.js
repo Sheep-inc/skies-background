@@ -34,20 +34,51 @@ export default function Pfp() {
     }
     return (<>
         <Script src="https://unpkg.com/merge-images"/>
-        <div className="row">
-            <div className="col">
-                <h3>choose a sky and upload any front image to generate pfp</h3>
-                <img key="mergeBottom" crossOrigin="anonymous" className={styles.merger} id="mergeBottom"/>
-                <img key="mergeTop" crossOrigin="anonymous" className={styles.merger} id="mergeTop"/>
-                <button className={styles.download} onClick={merge}>Download</button>
-            </div>
-            <div className="col">{skies.length<1?<Modal addyUpdate={fetchSkies}/>:skies}</div>
-            <div className="col">
-                <input type="file" onChange={imgUpload} />
-                <img className="userInputImg" />
+        <div className="container">
+            <div className="row">
+                <div className={`col-md col-12 row order-3 order-md-1 ${styles.col}`}>
+                    <div className="col-12">
+                        <h3>choose a sky and upload any front image to generate pfp</h3>
+                    </div>
+                    <div className="col-12">
+                        <img key="mergeBottom" crossOrigin="anonymous" className={styles.merger} id="mergeBottom"/>
+                        <img key="mergeTop" crossOrigin="anonymous" className={styles.merger} id="mergeTop"/>
+                        <button className={styles.download} onClick={merge}>Download</button>
+                    </div>
+                </div>
+                <div className={`col-md col-6 order-1 order-md-2 ${styles.col}`}>{skies.length<1?<Modal addyUpdate={fetchSkies}/>:skies}</div>
+                <div className={`col-md col-6 order-2 order-md-3 ${styles.col}`}>
+                    <input type="file" onChange={imgUpload} />
+                    <img className="userInputImg" />
+                </div>
             </div>
         </div>
-
+        <style jsx>{`
+            .col-12{
+                text-align:center;
+            }
+            .order-md-1{
+                margin:unset;
+            }
+            @media (min-width:768px){
+                .col{
+                    height: 98vh;
+                }
+            }
+            @media (max-width:768px){
+                .order-md-1{
+                    border-bottom: unset;
+                    border-left: unset;
+                    border-right: unset;
+                }
+            }
+            input{
+                width: fill-available;
+            }
+            .userInputImg{
+                width:100%
+            }
+        `}</style>
     </>)
 }
 
@@ -94,8 +125,6 @@ async function imgUpload(e) {
 
         //output image
         let conImage= document.getElementById("mergeTop")
-        conImage.style.width = "250px";
-        conImage.style.height = "250px";
         conImage.src = URL.createObjectURL(outputBlob);
     };
 }
