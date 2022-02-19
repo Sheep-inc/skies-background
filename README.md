@@ -1,71 +1,34 @@
-# LONDON Monorepo
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-The official monorepo powering the LONDON contracts, generative art, and front-end dapp.
+## Getting Started
 
-## Useful links
+First, run the development server:
 
-[production link](https://london.pob.studio)
-
-[snapshot governance link](https://snapshot.org/#/london.pob.eth)
-
-## Packages
-
-The LONDON repo is structured as a monorepo containing many packages that reach all aspects of the LONDON ecosystem.
-
-| Package                 | Description                                                                                    |
-| ----------------------- | ---------------------------------------------------------------------------------------------- |
-| [`app`](/app)           | Core next.js webapp of pob.studio and HASH and lambdas                                         |
-| [`protocol`](/protocol) | Core protocol of LONDON, contains the ERC721 token, minter contracts, and other future things. |
-| [`sketches`](/sketches) | Generative art and a development runtime                                                       |
-| [`scripts`](/scripts)   | Some administrative scripts to help with running POB (ie refresh opensea metadata)             |
-
-## Setting up the monorepo
-
-The `sketches` package depends on the `node-canvas` package which have external binary dependencies. Before running `yarn install` first consult the docs [here](https://github.com/Automattic/node-canvas).
-
-In the root of the directory:
-
-```
-$ yarn install
+```bash
+npm run dev
+# or
+yarn dev
 ```
 
-### Running app
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Visit the `app` repo and add a `.env` file with the following variables:
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-```
-NEXT_PUBLIC_CHAIN_ID="1"
-NEXT_PUBLIC_ALCHEMY_KEY="ALCHEMY_KEY"
-```
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-Setup an [alchemy](http://alchemy.com/) account and get an api key to be put in the .env file.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-Walla! visit `localhost:3000` to see your build running locally!
+## Learn More
 
-### Running protocol
+To learn more about Next.js, take a look at the following resources:
 
-Visit the `protocol` repo and add a `.env` file with the following variables:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-```
-RINKEBY_NETWORK_RPC_URL="OPTIONAL"
-RINKEBY_MNEMONIC="OPTIONAL"
-MAINNET_NETWORK_RPC_URL="OPTIONAL"
-MAINNET_PRIVATE_KEY="OPTIONAL"
-ETHERSCAN_API_KEY="OPTIONAL"
-```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-Provide either networks corresponding url and key.
+## Deploy on Vercel
 
-With `npx` you can run hardhat tasks like so:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-```
-$ npx hardhat deploy-nft --network rinkeby
-```
-
-## Contributing
-
-As the project is now governed by the LONDON DAO, this repo's continued development is incentived via DAO proposals and grants. As POB studios, we will maintain and host the production build of the website and review PRs.
-
-## LICENSE
-
-[MIT](/LICENSE)
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
