@@ -61,8 +61,8 @@ export default function Pfp() {
                 margin:unset;
             }
             @media (min-width:768px){
-                .col{
-                    height: 98vh;
+                .col-md{
+                    height: 95vh;
                 }
             }
             @media (max-width:768px){
